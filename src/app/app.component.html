@@ -1,0 +1,25 @@
+
+    <div class="minimizable-web-chat">
+        <button class="maximize" (click)='handleMaximizeButtonClick()'>
+            <span [ngClass]="token ? 'ms-Icon ms-Icon--MessageFill' : 'ms-Icon ms-Icon--Message'" ></span>
+        <span *ngIf="newMessage" className="ms-Icon ms-Icon--CircleShapeSolid red-dot" ></span>
+     </button>
+     
+      <div *ngIf="loaded" [ngClass]= "minimized? 'chat-box right hide':'chat-box right'">
+            <header>
+                <div class="filler" ></div>
+                <button class="switch" (click)="handleSwitchButtonClick()">
+                    <span class="ms-Icon ms-Icon--Switch" ></span>
+                </button>
+                <button class="minimize" (click)="handleMinimizeButtonClick()">
+                    <span class="ms-Icon ms-Icon--ChromeMinimize" ></span>
+                </button>
+                <button class="minimize" (click)="handleLoadButtonClick()">
+                    <span class="ms-Icon ms-Icon--ChromeMinimize" ></span>
+                </button>
+            </header> 
+           
+            <div class="webchat-container" id="botWindow"></div>         
+        </div>
+    </div>
+
