@@ -11,6 +11,33 @@ declare global {
 
 window.WebChat = window.WebChat || {};
 
+const styleOptions = {
+  accent: '#5A5A5A',
+  botAvatarImage: 'assets/images/webchat/bh-chat-logo.svg',
+  avatarBorderRadius: '0',
+  avatarSize: 30,
+  botAvatarInitials: 'MyBH',
+  botAvatarBackgroundColor: '#FFF',
+  bubbleBackground: '#eeeded',
+  bubbleBorderColor: '#eeeded',
+  bubbleTextColor: 'black',
+  bubbleBorderRadius: 14,
+  bubbleBorderWidth: 1,
+  bubbleNubSize: 0,
+  bubbleNubOffset: 'bottom',
+  bubbleFromUserBackground: '#1a475f',
+  bubbleFromUserBorderColor: '#5A5A5A',
+  bubbleFromUserTextColor: 'white',
+  bubbleFromUserBorderRadius: 14,
+  bubbleFromUserBorderWidth: 1,
+  bubbleFromUserNubSize: 0,
+  bubbleFromUserNubOffset: 'bottom',
+  groupTimestamp: 3000,
+  showAvatarInGroup: 'status',
+  hideUploadButton: true,
+  suggestedActionLayout: 'stacked',
+};
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -31,7 +58,7 @@ export class AppComponent implements OnInit {
     const el = document.getElementById('botWindow');
     if (!el) return;
     const directLine = window.WebChat.createDirectLine({
-      secret: 'rx9DlV3_inw.UicKny46K5StB2PAd9dChu1i5AQ6q7OQgV7zXSESaOI',
+      secret: 'NFJod-6Mx6k.c-kLNkn4V3oNeQTFPApqb_32mokGiTZj0zVnFf_HKnE',
       webSocket: false,
     });
     console.log('init');
@@ -39,6 +66,7 @@ export class AppComponent implements OnInit {
     window.WebChat.renderWebChat(
       {
         directLine: directLine,
+        styleOptions: styleOptions
       },
       el
     );
