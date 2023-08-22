@@ -13,11 +13,11 @@ window.WebChat = window.WebChat || {};
 
 const styleOptions = {
   accent: '#5A5A5A',
-  botAvatarImage: 'assets/images/webchat/bh-chat-logo.svg',
+  botAvatarImage: 'logo.svg',
   avatarBorderRadius: '0',
   avatarSize: 30,
-  botAvatarInitials: 'MyBH',
-  botAvatarBackgroundColor: '#FFF',
+  botAvatarInitials: 'BH',
+  botAvatarBackgroundColor: '#1a475f',
   bubbleBackground: '#eeeded',
   bubbleBorderColor: '#eeeded',
   bubbleTextColor: 'black',
