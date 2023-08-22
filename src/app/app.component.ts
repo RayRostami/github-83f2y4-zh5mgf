@@ -13,7 +13,7 @@ window.WebChat = window.WebChat || {};
 
 const styleOptions = {
   accent: '#5A5A5A',
-  botAvatarImage: 'logo.svg',
+  botAvatarImage: 'assets/images/webchat/bh-chat-logo.svg',
   avatarBorderRadius: '0',
   avatarSize: 30,
   botAvatarInitials: 'BH',
